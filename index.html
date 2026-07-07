@@ -4,60 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mendifly | Proyecto Final</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #050505;
-      color: #ffffff;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 1.25rem;
-    }
-
-    h1 .highlight {
-      color: #00e5ff;
-    }
-
-    .subtitle {
-      font-size: clamp(1rem, 3vw, 1.25rem);
-      font-weight: 300;
-      color: #a0a0a0;
-      letter-spacing: 0.04em;
-      margin-bottom: 3rem;
-    }
-
-    footer {
-      font-size: 0.75rem;
-      color: #a0a0a0;
-      opacity: 0.6;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
+    <a href="#" class="header__logo">Mendifly</a>
+    <nav class="header__nav">
+      <a href="#hero" class="header__link">Inicio</a>
+      <a href="#servicios" class="header__link">Servicios</a>
+      <a href="#contacto" class="header__link">Contacto</a>
+    </nav>
+  </header>
+
   <main>
-    <h1><span class="highlight">Mend</span>ifly</h1>
-    <p class="subtitle">Fase 1: Ambientación y aprovisionamiento</p>
+    <section id="hero" class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title"><span class="hero__highlight">Mend</span>ifly</h1>
+        <p class="hero__description">
+          Agencia de desarrollo de software especializada en soluciones digitales
+          escalables, diseño moderno y tecnología de alto rendimiento.
+        </p>
+        <a href="#contacto" class="hero__cta">Contactar</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <h2 class="servicios__title">Nuestros Servicios</h2>
+      <div class="servicios__grid">
+        <article class="servicio-card">
+          <h3 class="servicio-card__title">Desarrollo de Software</h3>
+          <p class="servicio-card__description">
+            Creamos aplicaciones web y móviles a medida con las últimas tecnologías,
+            garantizando calidad, rendimiento y mantenibilidad en cada proyecto.
+          </p>
+        </article>
+        <article class="servicio-card">
+          <h3 class="servicio-card__title">Escalabilidad</h3>
+          <p class="servicio-card__description">
+            Diseñamos arquitecturas robustas que crecen con tu negocio,
+            optimizando recursos y asegurando disponibilidad en todo momento.
+          </p>
+        </article>
+        <article class="servicio-card">
+          <h3 class="servicio-card__title">Diseño</h3>
+          <p class="servicio-card__description">
+            Interfaces intuitivas y experiencias de usuario excepcionales
+            que combinan estética moderna con funcionalidad precisa.
+          </p>
+        </article>
+      </div>
+    </section>
   </main>
-  <footer>Materia: Diseño Web</footer>
+
+  <footer id="contacto" class="footer">
+    <p class="footer__text">&copy; 2026 Mendifly. Todos los derechos reservados.</p>
+    <p class="footer__phase">Proyecto Final — Fase 2 y 3</p>
+  </footer>
 </body>
 </html>
