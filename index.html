@@ -3,62 +3,593 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mendifly | Proyecto Final</title>
+  <meta name="description" content="Mendifly - Agencia de software. Desarrollo de sistemas a medida, páginas web, landing pages y soluciones digitales escalables.">
+  <title>Mendifly | Software, Sistemas y Páginas Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <a href="#" class="header__logo">Mendifly</a>
-    <nav class="header__nav">
-      <a href="#hero" class="header__link">Inicio</a>
-      <a href="#servicios" class="header__link">Servicios</a>
-      <a href="#contacto" class="header__link">Contacto</a>
+  <!-- Fondo decorativo -->
+  <div class="bg-rays" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <path d="M4 26 L16 6 L28 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 26 L16 14 L22 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+          </svg>
+        </span>
+        <span class="logo__text">MENDI<span class="logo__accent">FLY</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#hero" class="nav__link nav__link--active">Inicio</a>
+        <a href="#servicios" class="nav__link">Servicios</a>
+        <a href="#proceso" class="nav__link">Proyectos</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn--glow-outline btn--sm header__cta">Agendar consulta</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile" aria-label="Navegación móvil">
+      <a href="#hero" class="nav-mobile__link">Inicio</a>
+      <a href="#servicios" class="nav-mobile__link">Servicios</a>
+      <a href="#proceso" class="nav-mobile__link">Proyectos</a>
+      <a href="#contacto" class="nav-mobile__link">Contacto</a>
+      <a href="#contacto" class="btn btn--glow-outline">Agendar consulta</a>
     </nav>
   </header>
 
   <main>
+    <!-- Hero -->
     <section id="hero" class="hero">
-      <div class="hero__content">
-        <h1 class="hero__title"><span class="hero__highlight">Mend</span>ifly</h1>
-        <p class="hero__description">
-          Agencia de desarrollo de software especializada en soluciones digitales
-          escalables, diseño moderno y tecnología de alto rendimiento.
-        </p>
-        <a href="#contacto" class="hero__cta">Contactar</a>
+      <div class="container hero__inner">
+        <div class="hero-carousel" id="heroCarousel" aria-live="polite">
+          <div class="hero-carousel__slides">
+
+            <article class="hero-slide is-active">
+              <h1 class="hero__title">
+                Construimos el <span class="text-accent">software</span> que impulsa tu negocio
+              </h1>
+              <p class="hero__subtitle">
+                En Mendifly desarrollamos sistemas a medida, páginas web, landing pages y plataformas
+                escalables. Transformamos ideas en productos digitales rápidos, seguros y hechos para crecer.
+              </p>
+            </article>
+
+            <article class="hero-slide">
+              <h1 class="hero__title">
+                Sistemas de gestión <span class="text-accent">a tu medida</span> — flotillas, CRM y POS
+              </h1>
+              <p class="hero__subtitle">
+                Plataformas empresariales que centralizan operaciones, automatizan procesos
+                y convierten datos en decisiones para tu negocio.
+              </p>
+            </article>
+
+            <article class="hero-slide">
+              <h1 class="hero__title">
+                <span class="text-accent">Landing pages</span> que convierten visitas en clientes
+              </h1>
+              <p class="hero__subtitle">
+                Páginas de aterrizaje enfocadas en resultados: rápidas, con buen diseño
+                y optimizadas para que tu campaña genere contactos reales.
+              </p>
+            </article>
+
+            <article class="hero-slide">
+              <h1 class="hero__title">
+                Tu <span class="text-accent">página web</span> corporativa, profesional y lista para vender
+              </h1>
+              <p class="hero__subtitle">
+                Sitios web modernos que representan tu marca, cargan rápido y funcionan
+                perfecto en celular. Hosting del primer año incluido.
+              </p>
+            </article>
+
+            <article class="hero-slide">
+              <h1 class="hero__title">
+                Primera <span class="text-accent">consultoría sin costo</span> — platícanos tu idea
+              </h1>
+              <p class="hero__subtitle">
+                Cuéntanos qué necesitas y te decimos cómo lo resolvemos, cuánto cuesta
+                y en cuánto tiempo lo tendrías listo. Sin compromiso.
+              </p>
+            </article>
+
+          </div>
+
+          <div class="hero-carousel__footer">
+            <div class="hero-carousel__dots" id="heroDots"></div>
+            <span class="hero-carousel__hint">&lt; Scroll o desliza &gt;</span>
+          </div>
+        </div>
+
+        <div class="hero__actions">
+          <a href="#contacto" class="btn btn--glow btn--lg">Iniciar proyecto</a>
+          <a href="#servicios" class="btn btn--outline btn--lg">Explorar servicios</a>
+        </div>
       </div>
     </section>
 
-    <section id="servicios" class="servicios">
-      <h2 class="servicios__title">Nuestros Servicios</h2>
-      <div class="servicios__grid">
-        <article class="servicio-card">
-          <h3 class="servicio-card__title">Desarrollo de Software</h3>
-          <p class="servicio-card__description">
-            Creamos aplicaciones web y móviles a medida con las últimas tecnologías,
-            garantizando calidad, rendimiento y mantenibilidad en cada proyecto.
+    <!-- Servicios -->
+    <section id="servicios" class="section section--servicios">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Lo que hacemos</span>
+          <h2 class="section__title">Servicios diseñados para escalar</h2>
+          <p class="section__lead">
+            No vendemos paquetes cerrados. Cada proyecto se arma según lo que
+            tu negocio realmente necesita.
           </p>
-        </article>
-        <article class="servicio-card">
-          <h3 class="servicio-card__title">Escalabilidad</h3>
-          <p class="servicio-card__description">
-            Diseñamos arquitecturas robustas que crecen con tu negocio,
-            optimizando recursos y asegurando disponibilidad en todo momento.
+        </div>
+      </div>
+
+      <div class="services-carousel" id="servicesCarousel">
+        <div class="services-carousel__viewport" id="servicesViewport">
+          <div class="services-carousel__track" id="servicesTrack">
+
+            <article class="service-card is-active">
+              <span class="service-card__corner service-card__corner--tl" aria-hidden="true"></span>
+              <span class="service-card__corner service-card__corner--br" aria-hidden="true"></span>
+              <span class="service-card__num">01</span>
+              <h3 class="service-card__title">Desarrollo de software</h3>
+              <p class="service-card__text">
+                Aplicaciones web y móviles a medida con arquitecturas modernas.
+                Código limpio, escalable y listo para crecer con tu negocio.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__corner service-card__corner--tl" aria-hidden="true"></span>
+              <span class="service-card__corner service-card__corner--br" aria-hidden="true"></span>
+              <span class="service-card__num">02</span>
+              <h3 class="service-card__title">Sistemas empresariales</h3>
+              <p class="service-card__text">
+                ERP, CRM y sistemas de gestión hechos a la medida. Automatiza
+                ventas, inventario y reportes sin depender de Excel.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__corner service-card__corner--tl" aria-hidden="true"></span>
+              <span class="service-card__corner service-card__corner--br" aria-hidden="true"></span>
+              <span class="service-card__num">03</span>
+              <h3 class="service-card__title">Páginas web premium</h3>
+              <p class="service-card__text">
+                Sitios corporativos rápidos, optimizados para SEO y diseñados
+                para representar tu marca con elegancia en cualquier dispositivo.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__corner service-card__corner--tl" aria-hidden="true"></span>
+              <span class="service-card__corner service-card__corner--br" aria-hidden="true"></span>
+              <span class="service-card__num">04</span>
+              <h3 class="service-card__title">Landing pages</h3>
+              <p class="service-card__text">
+                Páginas de aterrizaje enfocadas en resultados. Ideales para
+                campañas, lanzamientos y captar clientes que de verdad convierten.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__corner service-card__corner--tl" aria-hidden="true"></span>
+              <span class="service-card__corner service-card__corner--br" aria-hidden="true"></span>
+              <span class="service-card__num">05</span>
+              <h3 class="service-card__title">Cloud y DevOps</h3>
+              <p class="service-card__text">
+                Despliegue en la nube, pipelines CI/CD e infraestructura
+                escalable con alta disponibilidad y monitoreo continuo.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__corner service-card__corner--tl" aria-hidden="true"></span>
+              <span class="service-card__corner service-card__corner--br" aria-hidden="true"></span>
+              <span class="service-card__num">06</span>
+              <h3 class="service-card__title">Diseño UX/UI Premium</h3>
+              <p class="service-card__text">
+                Interfaces intuitivas y experiencias de usuario que combinan
+                estética moderna con funcionalidad precisa en cada interacción.
+              </p>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="services-carousel__footer">
+          <div class="services-carousel__dots" id="servicesDots"></div>
+          <span class="services-carousel__hint">&lt; Desliza o selecciona una tarjeta &gt;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section id="proceso" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Cómo trabajamos</span>
+          <h2 class="section__title">Un proceso claro y transparente</h2>
+          <p class="section__lead">
+            Metodología ágil que te mantiene informado en cada etapa del proyecto.
           </p>
-        </article>
-        <article class="servicio-card">
-          <h3 class="servicio-card__title">Diseño</h3>
-          <p class="servicio-card__description">
-            Interfaces intuitivas y experiencias de usuario excepcionales
-            que combinan estética moderna con funcionalidad precisa.
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Descubrimiento</h3>
+            <p class="step__text">Analizamos tu negocio, objetivos y requerimientos para definir el alcance.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Diseño</h3>
+            <p class="step__text">Creamos wireframes y prototipos visuales antes de escribir una línea de código.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Desarrollo</h3>
+            <p class="step__text">Construimos tu producto en ciclos cortos con entregas continuas y revisiones.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Lanzamiento</h3>
+            <p class="step__text">Desplegamos, monitoreamos y damos soporte para que todo funcione perfecto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section id="tecnologias" class="section section--tech">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Stack tecnológico</span>
+          <h2 class="section__title">Trabajamos con tecnología de punta</h2>
+          <p class="section__lead">
+            Elegimos las herramientas correctas para cada reto, priorizando rendimiento y escalabilidad.
           </p>
-        </article>
+        </div>
+      </div>
+
+      <div class="tech-marquee" aria-label="Tecnologías que utilizamos">
+        <div class="tech-marquee__fade tech-marquee__fade--left" aria-hidden="true"></div>
+        <div class="tech-marquee__fade tech-marquee__fade--right" aria-hidden="true"></div>
+        <div class="tech-marquee__track">
+          <div class="tech-marquee__group" id="techLogos">
+            <img class="tech-logo" src="icons/javascript.svg" alt="JavaScript" width="48" height="48">
+            <img class="tech-logo" src="icons/typescript.svg" alt="TypeScript" width="48" height="48">
+            <img class="tech-logo" src="icons/react.svg" alt="React" width="48" height="48">
+            <img class="tech-logo" src="icons/nextdotjs.svg" alt="Next.js" width="48" height="48">
+            <img class="tech-logo" src="icons/nodedotjs.svg" alt="Node.js" width="48" height="48">
+            <img class="tech-logo" src="icons/python.svg" alt="Python" width="48" height="48">
+            <img class="tech-logo" src="icons/laravel.svg" alt="Laravel" width="48" height="48">
+            <img class="tech-logo" src="icons/postgresql.svg" alt="PostgreSQL" width="48" height="48">
+            <img class="tech-logo" src="icons/mysql.svg" alt="MySQL" width="48" height="48">
+            <img class="tech-logo" src="icons/mongodb.svg" alt="MongoDB" width="48" height="48">
+            <img class="tech-logo" src="icons/docker.svg" alt="Docker" width="48" height="48">
+            <img class="tech-logo" src="icons/amazonaws.svg" alt="AWS" width="48" height="48">
+            <img class="tech-logo" src="icons/figma.svg" alt="Figma" width="48" height="48">
+            <img class="tech-logo" src="icons/git.svg" alt="Git" width="48" height="48">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <div class="cta__content">
+            <h2 class="cta__title">¿Tienes una idea o un problema que resolver?</h2>
+            <p class="cta__text">
+              Escríbenos por WhatsApp o correo. Te respondemos en menos de 24 horas
+              con una cotización clara, sin compromiso.
+            </p>
+          </div>
+          <a href="#contacto" class="btn btn--primary btn--lg">Hablemos</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer id="contacto" class="footer">
-    <p class="footer__text">&copy; 2026 Mendifly. Todos los derechos reservados.</p>
-    <p class="footer__phase">Proyecto Final — Fase 2 y 3</p>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="logo">
+          <span class="logo__text">MENDI<span class="logo__accent">FLY</span></span>
+        </a>
+        <p class="footer__tagline">
+          Armamos software, páginas web y sistemas para negocios que quieren dejar de improvisar.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Servicios</h4>
+        <a href="#servicios" class="footer__link">Desarrollo de software</a>
+        <a href="#servicios" class="footer__link">Sistemas empresariales</a>
+        <a href="#servicios" class="footer__link">Páginas web</a>
+        <a href="#servicios" class="footer__link">Landing pages</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Empresa</h4>
+        <a href="#proceso" class="footer__link">Proceso</a>
+        <a href="#tecnologias" class="footer__link">Tecnologías</a>
+        <a href="#contacto" class="footer__link">Contacto</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Contacto</h4>
+        <a href="mailto:hola@mendifly.com" class="footer__link">hola@mendifly.com</a>
+        <a href="tel:+520000000000" class="footer__link">+52 000 000 0000</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 Mendifly. Todos los derechos reservados.</p>
+        <p class="footer__phase">Proyecto Final — Fase 2 y 3</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobile = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => {
+      const open = mobile.classList.toggle('is-open');
+      toggle.classList.toggle('is-active', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    mobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobile.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 20);
+    });
+
+    /* Carrusel de textos del hero */
+    const heroCarousel = document.getElementById('heroCarousel');
+    const heroSlides = heroCarousel.querySelectorAll('.hero-slide');
+    const heroDots = document.getElementById('heroDots');
+
+    let heroIndex = 0;
+    let heroTimer = null;
+    let heroPaused = false;
+    const HERO_INTERVAL = 6000;
+
+    heroSlides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'hero-carousel__dash' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', 'Ir al mensaje ' + (i + 1));
+      dot.addEventListener('click', () => goToHeroSlide(i));
+      heroDots.appendChild(dot);
+    });
+
+    const heroDashEls = heroDots.querySelectorAll('.hero-carousel__dash');
+
+    function setHeroHeight() {
+      const container = heroCarousel.querySelector('.hero-carousel__slides');
+      let maxH = 0;
+      heroSlides.forEach(slide => {
+        slide.style.position = 'static';
+        slide.style.opacity = '0';
+        slide.style.visibility = 'hidden';
+        maxH = Math.max(maxH, slide.offsetHeight);
+      });
+      heroSlides.forEach(slide => {
+        slide.style.position = '';
+        slide.style.opacity = '';
+        slide.style.visibility = '';
+        if (!slide.classList.contains('is-active')) {
+          slide.style.position = 'absolute';
+        }
+      });
+      container.style.minHeight = maxH + 'px';
+    }
+
+    function goToHeroSlide(index) {
+      const target = (index + heroSlides.length) % heroSlides.length;
+      if (target === heroIndex) return;
+      heroSlides[heroIndex].classList.remove('is-active');
+      heroDashEls[heroIndex].classList.remove('is-active');
+      heroIndex = target;
+      heroSlides[heroIndex].classList.add('is-active');
+      heroDashEls[heroIndex].classList.add('is-active');
+      restartHeroTimer();
+    }
+
+    function nextHeroSlide() {
+      goToHeroSlide(heroIndex + 1);
+    }
+
+    function restartHeroTimer() {
+      clearInterval(heroTimer);
+      if (!heroPaused) {
+        heroTimer = setInterval(nextHeroSlide, HERO_INTERVAL);
+      }
+    }
+
+    heroCarousel.addEventListener('mouseenter', () => {
+      heroPaused = true;
+      clearInterval(heroTimer);
+    });
+
+    heroCarousel.addEventListener('mouseleave', () => {
+      heroPaused = false;
+      restartHeroTimer();
+    });
+
+    let touchStartX = 0;
+    heroCarousel.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    heroCarousel.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) {
+        goToHeroSlide(diff > 0 ? heroIndex + 1 : heroIndex - 1);
+      }
+    }, { passive: true });
+
+    setHeroHeight();
+    restartHeroTimer();
+    window.addEventListener('resize', setHeroHeight);
+
+    /* Carrusel de servicios premium */
+    const servicesCarousel = document.getElementById('servicesCarousel');
+    const servicesTrack = document.getElementById('servicesTrack');
+    const servicesViewport = document.getElementById('servicesViewport');
+    const servicesCards = servicesTrack.querySelectorAll('.service-card');
+    const servicesDots = document.getElementById('servicesDots');
+
+    let serviceIndex = 0;
+    const serviceGap = 24;
+    let dragOffset = 0;
+    let dragStartX = 0;
+    let isDragging = false;
+    let hasDragged = false;
+
+    servicesCards.forEach((card, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'services-carousel__dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', 'Ir al servicio ' + (i + 1));
+      dot.addEventListener('click', () => goToService(i));
+      servicesDots.appendChild(dot);
+
+      card.addEventListener('click', () => {
+        if (!hasDragged) goToService(i);
+      });
+    });
+
+    const serviceDotEls = servicesDots.querySelectorAll('.services-carousel__dot');
+
+    function getServiceOffset() {
+      const cardWidth = servicesCards[0].offsetWidth;
+      return (servicesViewport.offsetWidth / 2) - (cardWidth / 2) - serviceIndex * (cardWidth + serviceGap);
+    }
+
+    function getNearestServiceIndex(offsetPx) {
+      const cardWidth = servicesCards[0].offsetWidth;
+      const step = cardWidth + serviceGap;
+      const centerOffset = (servicesViewport.offsetWidth / 2) - (cardWidth / 2);
+      const raw = (centerOffset - offsetPx) / step;
+      return Math.max(0, Math.min(servicesCards.length - 1, Math.round(raw)));
+    }
+
+    function setServiceVisualState(previewIndex) {
+      servicesCards.forEach((card, i) => {
+        const dist = Math.abs(i - previewIndex);
+        card.classList.toggle('is-active', i === previewIndex);
+        card.classList.toggle('is-near', dist === 1);
+        card.classList.toggle('is-far', dist > 1);
+      });
+    }
+
+    function updateServicesCarousel(animate, previewIndex) {
+      const activeIndex = previewIndex ?? serviceIndex;
+      const offset = getServiceOffset() + dragOffset;
+      servicesTrack.style.transition = animate !== false
+        ? 'transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1)'
+        : 'none';
+      servicesTrack.style.transform = 'translateX(' + offset + 'px)';
+
+      setServiceVisualState(activeIndex);
+
+      serviceDotEls.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === serviceIndex);
+      });
+    }
+
+    function goToService(index) {
+      serviceIndex = Math.max(0, Math.min(index, servicesCards.length - 1));
+      dragOffset = 0;
+      updateServicesCarousel(true);
+    }
+
+    servicesViewport.addEventListener('pointerdown', (e) => {
+      isDragging = true;
+      hasDragged = false;
+      dragStartX = e.clientX;
+      dragOffset = 0;
+      servicesViewport.setPointerCapture(e.pointerId);
+      servicesTrack.style.transition = 'none';
+      servicesViewport.classList.add('is-dragging');
+    });
+
+    servicesViewport.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      dragOffset = e.clientX - dragStartX;
+      if (Math.abs(dragOffset) > 8) hasDragged = true;
+      const previewIndex = getNearestServiceIndex(getServiceOffset() + dragOffset);
+      updateServicesCarousel(false, previewIndex);
+    });
+
+    servicesViewport.addEventListener('pointerup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      servicesViewport.classList.remove('is-dragging');
+
+      const threshold = 60;
+      const previewIndex = getNearestServiceIndex(getServiceOffset() + dragOffset);
+
+      if (dragOffset < -threshold) goToService(serviceIndex + 1);
+      else if (dragOffset > threshold) goToService(serviceIndex - 1);
+      else if (previewIndex !== serviceIndex) goToService(previewIndex);
+      else {
+        dragOffset = 0;
+        updateServicesCarousel(true);
+      }
+    });
+
+    servicesViewport.addEventListener('pointercancel', () => {
+      isDragging = false;
+      dragOffset = 0;
+      servicesViewport.classList.remove('is-dragging');
+      updateServicesCarousel(true);
+    });
+
+    let wheelCooldown = false;
+    servicesViewport.addEventListener('wheel', (e) => {
+      if (wheelCooldown) return;
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (Math.abs(delta) < 12) return;
+      e.preventDefault();
+      wheelCooldown = true;
+      if (delta > 0) goToService(serviceIndex + 1);
+      else goToService(serviceIndex - 1);
+      setTimeout(() => { wheelCooldown = false; }, 500);
+    }, { passive: false });
+
+    updateServicesCarousel(true);
+    window.addEventListener('resize', () => updateServicesCarousel(false));
+
+    /* Duplicar logos para carrusel infinito */
+    const techGroup = document.getElementById('techLogos');
+    if (techGroup) {
+      const clone = techGroup.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      techGroup.parentElement.appendChild(clone);
+    }
+  </script>
 </body>
 </html>
